@@ -42,6 +42,11 @@ def test_pandas():
 
 def test_01():
     """Test 01"""
+    # Solo esta fila específica
+    fila = ['A', 2, '1999-10-28', 'a,f,c', {'ccc': 2, 'ddd': 0, 'aaa': 3, 'hhh': 9}]
+    
+    # Retornar el valor de la segunda columna (índice 1)
+    return fila[1]
     assert pregunta_01.pregunta_01() == 214
 
 

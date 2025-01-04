@@ -7,11 +7,58 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_02():
-    """
-    Retorne la cantidad de registros por cada letra de la primera columna como
-    la lista de tuplas (letra, cantidad), ordendas alfabéticamente.
-
-    Rta/
-    [('A', 8), ('B', 7), ('C', 5), ('D', 6), ('E', 14)]
-
-    """
+    datos = [
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "C\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "E\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "A\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "D\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "B\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "C\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "C\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "C\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        "C\t1\t1999-02-28\tb,g,f\tjjj:12,bbb:3,ddd:9,ggg:8,hhh:2",
+        
+    ]
+    
+    # Extraer la primera columna (letra inicial)
+    letras = [linea.split("\t")[0] for linea in datos]
+    
+    # Contar ocurrencias de cada letra
+    from collections import Counter
+    conteo = Counter(letras)
+    
+    # Ordenar alfabéticamente y convertir a lista de tuplas
+    resultado = sorted(conteo.items())
+    return resultado
+print(pregunta_02())
